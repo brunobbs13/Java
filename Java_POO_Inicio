@@ -1,0 +1,77 @@
+package br.com.POO;
+/*
+ Classes = é um monde para que os objetos sejam contruídos, fazendo com que estes objetos que estão dentro das classes tenham carcteristicas (atributos).
+
+*/
+
+//Fazer a gestão de uma frota em um determinado estado
+	class Carro{
+		//atributos
+		private String marca; 
+		private String modelo; 
+		private String matricula; 
+		private int preco;
+	
+	
+	
+	//construtores = Faz com que os valores dos atributos das classes citadas à cima sejam iniciados com um determinado valor desejado
+	public Carro(String marca, String modelo, String matricula, int preco){
+		this.marca = marca;
+		this.modelo = modelo;
+		this.matricula = matricula;
+		this.preco = preco;
+	//  this.atributo = parâmetro_de_entrada
+	}
+	
+	//construtor 2
+	public Carro(){
+		this.marca = null;
+		this.modelo = null;
+		this.matricula = null;
+		this.preco = 0;
+	//  this.atributo = parâmetro_de_entrada
+	}
+	
+	//construtor 3
+	public Carro(String marca, String modelo){
+		this.marca = marca;
+		this.modelo = modelo;
+		this.matricula = null;
+		this.preco = 0;
+	//  this.atributo = parâmetro_de_entrada
+	}
+	
+	
+	//Metodos (Get and Set)
+	public String getMarca() { //public tipoDeValorQueRetorna getNomeMetodo
+		return marca;
+	} 
+	
+	public void setMarca(String marca) {
+		this.marca = "Nissan"; 
+	}
+	
+	
+	//private = não pode ser decidido ou alterado os valores, para modificar é necessario ultilizar os metodos citados à cima (Get AND Set)
+	
+	//METODOS - Cria ações desejadas por você, ou sejá, pode realizar ações quando o carro for andar, freiar virar e etc
+	public void mostrar() {
+		System.out.println("Marca" + marca);
+		System.out.println("Modelo" + modelo);
+		System.out.println("Matricula" + matricula);
+		System.out.println("Preço" + preco + "\n");
+
+	}
+	}
+	public class Intro_Classe {
+		public static void main(String[] args) {
+			Carro c1 = new Carro ("Nissan","Livina","123-GS",7200);
+			
+			c1.mostrar();	
+		}
+		
+		
+		
+		
+	}
+
